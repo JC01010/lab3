@@ -41,11 +41,9 @@ public class ArrayExamples {
 
 
   public static void main(String[] args) {
-    int[] input1 = { 4, 5, 6 };
-    int[] arr1 = ArrayExamples.reversed(input1);
-    for (int i = 0; i < 3; i++) {
-      System.out.println(arr1[i]);
-    }
+    double[] input1 = { 1.0, 1.0, 1.0, 1.0 };
+    double arr1 = ArrayExamples.averageWithoutLowest(input1);
+    System.out.println(arr1);
   }
 }
 

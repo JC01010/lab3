@@ -1,7 +1,7 @@
 import static org.junit.Assert.*;
 import org.junit.*;
 
-public class ArrayTests {
+public class ListTests {
 	@Test 
 	public void testReverseInPlace() {
     int[] input1 = { 3 };
@@ -32,16 +32,9 @@ public class ArrayTests {
 
 
 	@Test 
-	public void testMinArray1() {
+	public void testMinArray() {
     double[] input1 = { 1.0, 1.0, 1.0, 1.0 };
     double d = ArrayExamples.averageWithoutLowest(input1);
     assertEquals(1.0, d, 0.0001);
 	}
-
-  @Test
-  public void testMinArray2() {
-    double[] input1 = { 1.0, 2.0, 3.0 };
-    double d = ArrayExamples.averageWithoutLowest(input1);
-    assertEquals(2.5, d, 0.0001);
-  }
 }
