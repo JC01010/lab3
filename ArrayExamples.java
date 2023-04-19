@@ -4,8 +4,12 @@ public class ArrayExamples {
 
   // Changes the input array to be in reversed order
   static void reverseInPlace(int[] arr) {
+    int[] newArray = new int[arr.length];
     for(int i = 0; i < arr.length; i += 1) {
-      arr[i] = arr[arr.length - i - 1];
+      newArray[i] = arr[arr.length - i - 1];
+    }
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = newArray[i];
     }
   }
 
@@ -14,9 +18,9 @@ public class ArrayExamples {
   static int[] reversed(int[] arr) {
     int[] newArray = new int[arr.length];
     for(int i = 0; i < arr.length; i += 1) {
-      arr[i] = newArray[arr.length - i - 1];
+      newArray[arr.length - i - 1] = arr[i];
     }
-    return arr;
+    return newArray;
   }
 
   // Averages the numbers in the array (takes the mean), but leaves out the
@@ -36,5 +40,12 @@ public class ArrayExamples {
   }
 
 
+  public static void main(String[] args) {
+    int[] input1 = { 4, 5, 6 };
+    int[] arr1 = ArrayExamples.reversed(input1);
+    for (int i = 0; i < 3; i++) {
+      System.out.println(arr1[i]);
+    }
+  }
 }
 
